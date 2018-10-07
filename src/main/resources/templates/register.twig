@@ -1,0 +1,148 @@
+{% extends "app.twig" %}
+
+{% block bodyClass %}login-page sidebar-collapse{% endblock %}
+{% block title %}Creaza-ti propriul cont{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .login-page .card-login {
+            max-width: 100%;
+        }
+
+        .page-header > .content {
+            margin-top: 7%;
+        }
+    </style>
+{% endblock %}
+
+{% block container %}
+    <div class="page-header clear-filter" filter-color="orange">
+        <div class="page-header-image" style="background-image:url({{ asset('images/login.jpg') }})"></div>
+        <div class="content">
+            <div class="container">
+                <div class="col-md-6 mx-auto">
+                    <div class="card card-login card-plain">
+                        <form class="form" method="POST" action="/register">
+                            {% csrf %}
+                            <div class="card-header text-center">
+                                <div class="logo-container">
+                                    <img src="{{ asset('images/now-logo.png') }}" alt="" width="65" height="70">
+                                </div>
+                                <h4>Creaza un cont nou</h4>
+                            </div>
+                            <div class="card-body text-white">
+                                <div class="form-group">
+                                    <div class="input-group no-border input-lg">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="fas fa-user mr-2"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" name="email" id="email" class="form-control h-auto"
+                                               placeholder="Introduceti emailul dumneavoastra">
+                                    </div>
+                                    <small>
+                                        Emailul va fi folosit pentru autentificare, precum si ca principal mod de
+                                        comunicare intre tine si echipa RoProjects.
+                                    </small>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group no-border input-lg">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="fas fa-user mr-2"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" name="full_name" id="full_name" class="form-control h-auto"
+                                               placeholder="Introduceti numele dumneavoastra complet">
+                                    </div>
+                                    <small>Numele afisat este prima impresie pe care utilizatorii si-o fac despre
+                                        dumneavoastra, asa ca am recomanda introducerea intregului nume.
+                                    </small>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group no-border input-lg">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="fas fa-key mr-2"></i>
+                                            </span>
+                                        </div>
+                                        <input type="password" id="password" name="password"
+                                               placeholder="Introduceti parola dorita"
+                                               class="form-control h-auto"/>
+                                    </div>
+                                    <small>Alegeti o parola pe care sa o tineti usor minte, cu o lungime cuprinsa intre
+                                        6 si 32 de caractere.
+                                    </small>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group no-border input-lg">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="fas fa-key mr-2"></i>
+                                            </span>
+                                        </div>
+                                        <input type="password" id="passwordConfirm" name="passwordConfirm"
+                                               placeholder="Introduceti din nou aceiasi parola"
+                                               class="form-control h-auto"/>
+                                    </div>
+                                    <small>Pentru a fi siguri ca ati introdus parola corect, va rugam sa o repetati
+                                        aici.
+                                    </small>
+                                </div>
+                            </div>
+
+                            <div class="card-footer text-center">
+                                <button type="submit" href="#pablo" class="btn btn-primary btn-round btn-lg btn-block">
+                                    Creati cont nou
+                                </button>
+                                <div class="text-center">
+                                    <h6>
+                                        <a href="/login" class="link">Aveti deja un cont?</a>
+                                    </h6>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="https://www.creative-tim.com">
+                                Creative Tim
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://presentation.creative-tim.com">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://blog.creative-tim.com">
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="copyright" id="copyright">
+                    &copy;
+                    <script>
+                        document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+                    </script>
+                    , Designed by
+                    <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
+                    <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+                </div>
+            </div>
+        </footer>
+    </div>
+{% endblock %}

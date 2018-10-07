@@ -1,0 +1,12 @@
+validation:
+  general:
+    not-empty: Acest camp este obligatoriu.
+
+  user:
+    size:
+      username: Va rugam sa folositi un nume de utilizator cuprins intre 6 si 32 de caractere.
+      password: Parola trebuie sa aiba minim 6 caractere.
+    duplicate:
+      username: Exista deja un utilizator cu acest nume.
+    diff:
+      password-confirm: Parolele nu sunt identice!

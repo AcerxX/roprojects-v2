@@ -1,0 +1,12 @@
+validation:
+  general:
+    not-empty: This field is required.
+
+  user:
+    size:
+      username: Please use between 6 and 32 characters.
+      password: Your password must have at least 6 characters.
+    duplicate:
+      username: Someone already has that username.
+    diff:
+      password-confirm: Passwords do not match!

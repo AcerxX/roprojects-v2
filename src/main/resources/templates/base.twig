@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+          name='viewport'/>
+
+    <title>{% block title %}RoProjects V2{% endblock %}</title>
+    <link rel="stylesheet" href="webjars/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="webjars/font-awesome/5.1.0/css/all.css">
+    {#<link rel="stylesheet" href="webjars/nouislider/11.0.0/distribute/nouislider.min.css">#}
+
+    {% block stylesheets %}
+    {% endblock %}
+
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body class="{% block bodyClass %}{% endblock %}">
+{% block body %}
+{% endblock %}
+
+{% csrf %}
+<script src="webjars/jquery/3.3.1-1/jquery.min.js"></script>
+<script src="webjars/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="webjars/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="webjars/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js"></script>
+<script src="webjars/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+<script src="webjars/nouislider/11.0.0/distribute/nouislider.min.js"></script>
+<script src="{{ asset('js/base.js') }}"></script>
+{#<script src="{{ asset('js/nouislider.min.js') }}"></script>#}
+
+{% block javascripts %}
+{% endblock %}
+
+</body>
+</html>

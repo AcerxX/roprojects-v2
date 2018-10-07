@@ -1,5 +1,8 @@
 {% extends "app.twig" %}
+
 {% block bodyClass %}login-page sidebar-collapse{% endblock %}
+{% block title %}Intra in contul tau{% endblock %}
+
 {% block container %}
     <div class="page-header clear-filter" filter-color="orange">
         <div class="page-header-image" style="background-image:url({{ asset('images/login.jpg') }})"></div>
@@ -13,12 +16,13 @@
                                 <div class="logo-container">
                                     <img src="{{ asset('images/now-logo.png') }}" alt="">
                                 </div>
+                                <h4>Intra in contul tau</h4>
                             </div>
                             <div class="card-body">
                                 <div class="input-group no-border input-lg">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
-                                            <i class="now-ui-icons users_circle-08"></i>
+                                            <i class="fas fa-user mr-2"></i>
                                         </span>
                                     </div>
                                     <input type="text" name="username" class="form-control h-auto" placeholder="Email">
@@ -27,7 +31,7 @@
                                 <div class="input-group no-border input-lg">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
-                                            <i class="now-ui-icons text_caps-small"></i>
+                                            <i class="fas fa-key mr-2"></i>
                                         </span>
                                     </div>
                                     <input type="password" name="password" placeholder="Parola"
@@ -41,7 +45,7 @@
                                 </button>
                                 <div class="pull-left">
                                     <h6>
-                                        <a href="#pablo" class="link">Creaza cont</a>
+                                        <a href="/register" class="link">Creaza cont</a>
                                     </h6>
                                 </div>
                                 <div class="pull-right">
